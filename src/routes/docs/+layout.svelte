@@ -35,24 +35,43 @@
 
 <style>
   .docs-container {
-    display: grid;
-    grid-template-columns: minmax(0, 1fr) 240px;
+    display: flex;
     gap: 2rem;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 2rem;
+    height: 100%;
+    width: 100%;
   }
 
   .docs-content {
+    width: 900px;
     min-width: 0;
   }
 
   .docs-toc {
+    width: 240px;
     position: sticky;
     top: 2rem;
     height: fit-content;
     padding-left: 1rem;
     border-left: 1px solid var(--border-color);
+    flex-shrink: 0;
+    margin-left: auto;
+  }
+
+  .docs-toc nav {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .docs-toc a {
+    color: #666;
+    text-decoration: none;
+    font-size: 0.9rem;
+    line-height: 1.4;
+  }
+
+  .docs-toc a:hover {
+    color: #0066cc;
   }
 
   .toc-header {
@@ -65,7 +84,7 @@
 
   @media (max-width: 1024px) {
     .docs-container {
-      grid-template-columns: 1fr;
+      flex-direction: column;
     }
 
     .docs-toc {

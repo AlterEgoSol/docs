@@ -151,10 +151,8 @@
 
 	main {
 		flex: 1;
-		padding: 2rem;
 		min-width: 0;
-		display: flex;
-		justify-content: flex-start;
+		padding: 2rem;
 	}
 
 	@media (max-width: 1024px) {
